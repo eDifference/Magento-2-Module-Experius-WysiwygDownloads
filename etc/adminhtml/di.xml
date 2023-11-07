@@ -1,7 +1,9 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 	<type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
-		<plugin disabled="false" name="Experius_WysiwygDownloads_Plugin_Magento_Cms_Model_Wysiwyg_Images_Storage" sortOrder="10" type="Experius\WysiwygDownloads\Plugin\Magento\Cms\Model\Wysiwyg\Images\Storage"/>
+		<plugin name="Experius_WysiwygDownloads_Plugin_Magento_Cms_Model_Wysiwyg_Images_Storage"
+                type="Experius\WysiwygDownloads\Plugin\Magento\Cms\Model\Wysiwyg\Images\Storage"
+                sortOrder="10" />
         <arguments>
             <argument name="extensions" xsi:type="array">
                 <item name="allowed" xsi:type="array">
@@ -13,11 +15,13 @@
                     <item name="doc" xsi:type="string">application/msword</item>
                     <item name="docx" xsi:type="string">application/vnd.openxmlformats-officedocument.wordprocessingml.document</item>
                     <item name="docm" xsi:type="string">application/vnd.ms-word.document.macroEnabled.12</item>
+                    <item name="odt" xsi:type="string">application/vnd.oasis.opendocument.text</item>
                     <item name="csv" xsi:type="string">text/plain</item>
                     <item name="txt" xsi:type="string">text/plain</item>
                     <item name="xml" xsi:type="string">application/xml</item>
                     <item name="xls" xsi:type="string">application/vnd.ms-excel</item>
                     <item name="xlsx" xsi:type="string">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</item>
+                    <item name="ods" xsi:type="string">application/vnd.oasis.opendocument.spreadsheet</item>
                     <item name="zip" xsi:type="string">application/zip</item>
                     <item name="tar" xsi:type="string">application/x-tar</item>
                     <item name="mp4" xsi:type="string">video/mp4</item>
@@ -33,11 +37,13 @@
                     <item name="doc" xsi:type="string">application/msword</item>
                     <item name="docx" xsi:type="string">application/vnd.openxmlformats-officedocument.wordprocessingml.document</item>
                     <item name="docm" xsi:type="string">application/vnd.ms-word.document.macroEnabled.12</item>
+                    <item name="odt" xsi:type="string">application/vnd.oasis.opendocument.text</item>
                     <item name="csv" xsi:type="string">text/plain</item>
                     <item name="txt" xsi:type="string">text/plain</item>
                     <item name="xml" xsi:type="string">application/xml</item>
                     <item name="xls" xsi:type="string">application/vnd.ms-excel</item>
                     <item name="xlsx" xsi:type="string">application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</item>
+                    <item name="ods" xsi:type="string">application/vnd.oasis.opendocument.spreadsheet</item>
                     <item name="zip" xsi:type="string">application/zip</item>
                     <item name="tar" xsi:type="string">application/x-tar</item>
                     <item name="mp4" xsi:type="string">video/mp4</item>
@@ -55,5 +61,10 @@
             </argument>
         </arguments>
 	</type>
+    <type name="Magento\MediaGalleryUi\Ui\Component\Control\UploadAssets">
+        <plugin name="Experius_WysiwygDownloads_Plugin_Magento_MediaGalleryUi_Ui_Component_Control_UploadAssets"
+                type="Experius\WysiwygDownloads\Plugin\Magento\MediaGalleryUi\Ui\Component\Control\UploadAssets"
+                sortOrder="10"/>
+    </type>
 	<preference for="Magento\Framework\Image\Adapter\Gd2" type="Experius\WysiwygDownloads\Image\Adapter\Gd2" />
 </config>
