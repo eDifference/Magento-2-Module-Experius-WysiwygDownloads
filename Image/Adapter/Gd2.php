@@ -31,7 +31,6 @@ class Gd2 extends \Magento\Framework\Image\Adapter\Gd2
         array $data = []
     ) {
         $this->settings = $helperSettings;
-
         parent::__construct($filesystem, $logger, $data);
     }
 
@@ -45,8 +44,8 @@ class Gd2 extends \Magento\Framework\Image\Adapter\Gd2
     public function open($filename)
     {
         $pathInfo = pathinfo($filename);
-        if (!key_exists('extension', $pathInfo)
-            || !in_array($pathInfo['extension'], $this->settings->getExtraFiletypes())
+        if (key_exists('extension', $pathInfo)
+            && in_array($pathInfo['extension'], $this->settings->getImageFiletypes())
         ) {
             parent::open($filename);
         }
@@ -65,8 +64,8 @@ class Gd2 extends \Magento\Framework\Image\Adapter\Gd2
     {
         $fileName = $this->_prepareDestination($destination, $newName);
         $pathInfo = pathinfo($fileName);
-        if (!key_exists('extension', $pathInfo)
-            || !in_array($pathInfo['extension'], $this->settings->getExtraFiletypes())
+        if (key_exists('extension', $pathInfo)
+            && in_array($pathInfo['extension'], $this->settings->getImageFiletypes())
         ) {
             parent::save($destination, $newName);
         }
