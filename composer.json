@@ -11,6 +11,10 @@
         {
             "name": "Boris van Katwijk",
             "email": "borisvankatwijk@happyhorizon.com"
+        },
+        {
+            "name": "Matthijs Iriks",
+            "email": "matthijsiriks@happyhorizon.com"
         }
     ],
     "minimum-stability": "dev",

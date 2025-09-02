@@ -101,7 +101,6 @@ class Settings extends AbstractHelper
             'jpeg',
             'png',
             'gif',
-            'webp',
             'bmp',
             'xpm',
             'xbm',
@@ -131,7 +130,6 @@ class Settings extends AbstractHelper
             'jpeg',
             'png',
             'gif',
-            'webp',
             'svg',
             'pdf',
             'doc',
@@ -149,7 +147,6 @@ class Settings extends AbstractHelper
             'mp3',
             'mp4',
             'ogg',
-            'webm',
             'bmp'
         ];
 
